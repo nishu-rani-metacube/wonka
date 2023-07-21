@@ -1,5 +1,5 @@
 # Ignore All SQL Files
-*.sql
+#*.sql
 /db*
 
 # Ignore Drupal's gitattributes
