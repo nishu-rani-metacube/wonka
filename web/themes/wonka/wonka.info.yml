@@ -1,0 +1,23 @@
+name: wonka
+type: theme
+'base theme': stable9
+starterkit: true
+version: VERSION
+libraries:
+  - wonka/base
+  - wonka/messages
+  - core/normalize
+  - wonka/global-styling
+libraries-extend:
+  user/drupal.user:
+    - wonka/user
+  core/drupal.dropbutton:
+    - wonka/dropbutton
+  core/drupal.dialog:
+    - wonka/dialog
+  file/drupal.file:
+    - wonka/file
+  core/drupal.progress:
+    - wonka/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.0.0'

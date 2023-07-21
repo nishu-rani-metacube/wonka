@@ -1,0 +1,5 @@
+{% for item in items %}
+	{% set url = item.content["#item"].entity.uri.value %}
+    {% set alt = item.content["#item"].value.alt %}
+	<img {{ attributes }} src="{{file_url(url)}}" alt="{{alt}}"/ >
+{% endfor %}

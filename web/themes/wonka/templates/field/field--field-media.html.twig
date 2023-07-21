@@ -1,0 +1,14 @@
+{% set items =  element['#items'] %}
+{% for item in items %}
+	{% set e = item.entity.field_media_image.entity %}
+	{% if e is empty %}
+		{% set e = item.entity.field_media_svg.entity %}
+	{% endif %}
+
+	{% set url = e.uri.value %}
+	{% set alt = e.value.alt %}
+	<img {{ attributes }} src="{{file_url(url)}}" alt="{{alt}}">
+
+{% endfor %}
+
+{# entity.field_media_svg.entity.uri.value #}

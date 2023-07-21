@@ -1,0 +1,9 @@
+{% import '@wonka/macros.twig' as macros %}
+
+<picture>
+	<source srcset="{{macros.paragraph_field_media_image_url(content.field_large_image)}}" media="(min-width: 1024px)">
+	<source srcset="{{macros.paragraph_field_media_image_url(content.field_medium_image)}}" media="(min-width: 768px)">
+	<source srcset="{{macros.paragraph_field_media_image_url(content.field_small_image)}}" type="image/jpg">
+	<img src="{{macros.paragraph_field_media_image_url(content.field_media_3)}}" alt="">
+</picture>
+
