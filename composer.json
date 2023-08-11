@@ -19,8 +19,10 @@
         "drupal/core-composer-scaffold": "10.0.0",
         "drupal/core-project-message": "10.0.0",
         "drupal/core-recommended": "10.0.0",
+        "drupal/menu_item_extras": "^3.0",
         "drupal/paragraphs": "^1.15",
-        "drupal/svg_image_field": "^2.2"
+        "drupal/svg_image_field": "^2.2",
+        "drupal/twig_tweak": "^3.2"
     },
     "conflict": {
         "drupal/drupal": "*"

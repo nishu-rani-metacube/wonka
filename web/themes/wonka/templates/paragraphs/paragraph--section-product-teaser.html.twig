@@ -1,0 +1,17 @@
+{% import '@wonka/macros.twig' as macros %}
+<div class="product-description">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="image-container"><img src="{{macros.paragraph_field_media_image_url(content.field_product_image)}}"/></div>
+			</div>
+			<div class="col-md-6">
+				<div class="content-container">
+					<h2 class="heading">{{content.field_product_title}}</h2>
+					{{content.field_product_description}}
+					{{content.field_content}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -55,7 +55,7 @@
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
-  <a class="navbar-brand" href="/"><img src="http://localhost/install-dir/web/themes/wonka/templates/layout/img/logo.png"/></a>
+  <a class="navbar-brand" href="{{ path('<front>') }}">{{ drupal_image(14) }}</a>
   <div class="menu">   
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="hamburger-icon btn-open">

@@ -24,20 +24,31 @@
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/3.x/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0) }}
+{{ menus.menu_links(items, attributes, 0, menu_name) }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
+  {{ menus }}
+
   {% if items %}
+
+    {% if menu_name == 'header' %}
+    {% set parentClasses = ['navbar-nav mr-auto',] %}
+    {% else %}
+    {% set parentClasses = ['footer-links',] %}
+    {% endif %}
+
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('navbar-nav mr-auto') }}>
+      <ul{{ attributes.addClass(parentClasses) }}>
     {% else %}
       <ul class="menu">
     {% endif %}
+
     {% for item in items %}
       {%
         set classes = [
-          'nav-item',
+          menu_name == 'header' ? 'nav-item',
+          menu_name == 'footer-menu' ? 'footer-link-item',
           item.is_expanded ? 'nav-item--expanded',
           item.is_collapsed ? 'nav-item--collapsed',
           item.in_active_trail ? 'active',

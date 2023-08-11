@@ -1,57 +1,3 @@
-base:
-  version: VERSION
-  css:
-    component:
-      css/components/action-links.css:
-        weight: -10
-      css/components/breadcrumb.css:
-        weight: -10
-      css/components/button.css:
-        weight: -10
-      css/components/container-inline.css:
-        weight: -10
-      css/components/details.css:
-        weight: -10
-      css/components/exposed-filters.css:
-        weight: -10
-      css/components/field.css:
-        weight: -10
-      css/components/form.css:
-        weight: -10
-      css/components/icons.css:
-        weight: -10
-      css/components/inline-form.css:
-        weight: -10
-      css/components/item-list.css:
-        weight: -10
-      css/components/link.css:
-        weight: -10
-      css/components/links.css:
-        weight: -10
-      css/components/menu.css:
-        weight: -10
-      css/components/more-link.css:
-        weight: -10
-      css/components/pager.css:
-        weight: -10
-      css/components/tabledrag.css:
-        weight: -10
-      css/components/tableselect.css:
-        weight: -10
-      css/components/tablesort.css:
-        weight: -10
-      css/components/tabs.css:
-        weight: -10
-      css/components/textarea.css:
-        weight: -10
-      css/components/ui-dialog.css:
-        weight: -10
-      css/components/bootstrap.min.css:
-        weight: -10
-      css/components/slick.css:
-        weight: -10
-      css/components/style.css:
-        weight: -10
 dialog:
   version: VERSION
   css:
@@ -115,6 +61,7 @@ global-styling:
       css/bootstrap.min.css: {}
       css/slick.css: {}
       css/style.css: {}
+      css/style.scss: {}
   js:
     js/bootstrap.bundle.min.js: {}
     js/index.js: {}
